@@ -4,7 +4,7 @@ import csv
 import urllib2
 import pdb
 
-curriculos = csv.DictReader(open('data/nomes.csv', 'r'))
+curriculos = csv.DictReader(open('data/NomesDAS16_temLattes_extraido.csv', 'r'))
 
 for curriculo in curriculos:
     # pdb.set_trace()

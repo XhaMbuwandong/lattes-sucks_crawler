@@ -4,7 +4,7 @@ import csv
 import urllib2
 import pdb
 
-curriculos = csv.DictReader(open('data/curriculums_ifpb.csv', 'r'))
+curriculos = csv.DictReader(open('data/NomesDAS16_temLattes_extraido.csv', 'r'))
 
 for curriculo in curriculos:
     # pdb.set_trace()
@@ -16,8 +16,8 @@ for curriculo in curriculos:
     curriculoXML = zipFile.read('curriculo.xml')
     zipFile.close()
 
-    file = open('data/xml/%s-%s.xml' % (name,id), 'w')
+    file = open('data/cv_xml/%s-%s.xml' % (name,id), 'w')
     file.write(curriculoXML)
     file.close()
 
-    print 'data/xml/%s-%s.xml created!' % (name,id)
+    print 'data/cv_xml/%s-%s.xml created!' % (name,id)
